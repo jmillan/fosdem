@@ -16,7 +16,7 @@
 		"debug": "^2.3.3",
 		"colors": "^1.1.2",
 		"jssip": "^3.0.0",
-		"jssip-node-websocket": "1.0.0",
+		"jssip-node-websocket": "^3.0.0",
 		"open": "0.0.5",
 		"clear": "0.0.1"
 	},

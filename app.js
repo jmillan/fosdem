@@ -10,6 +10,7 @@ const NodeWebSocket = require('jssip-node-websocket');
 const readline = require('readline');
 const open = require('open');
 const clear = require('clear');
+const colors = require('colors/safe');
 const debug = require('debug')('fosdem-demo');
 const error = require('debug')('fosdem-demo-error');
 
@@ -81,7 +82,7 @@ function onMessage(e)
 		}
 		else
 		{
-			console.log('... %s', content);
+			console.log(`${colors.magenta('[' + remotePeer + ']')} ${content}`);
 		}
 	}
 }

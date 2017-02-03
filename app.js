@@ -134,7 +134,7 @@ function cli()
 				console.log('- chat       : establish a chat session with the remote peer');
 				console.log('- call       : establish a call with the remote peer');
 				console.log('- register   : register SIP UA');
-				console.log('- unregister : establish a call with the remote peer');
+				console.log('- unregister : unregister SIP UA');
 				console.log('- peer       : set remote peer name');
 				console.log('- info       : dump the local information');
 				console.log('- quit       : stop the app');

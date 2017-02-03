@@ -1,0 +1,29 @@
+{
+	"name": "fosdem",
+	"version": "1.0.0",
+	"description": "easy JsSIP demo",
+	"main": "index.js",
+	"scripts": {
+		"test": "test"
+	},
+	"keywords": [
+		"webrtc",
+	"jssip"
+		],
+	"author": "José Luis Millán",
+	"license": "ISC",
+	"dependencies": {
+		"debug": "^2.3.3",
+		"colors": "^1.1.2",
+		"jssip": "^3.0.0",
+		"jssip-node-websocket": "1.0.0",
+		"open": "0.0.5",
+		"clear": "0.0.1"
+	},
+	"devDependencies": {
+		"gulp": "git+https://github.com/gulpjs/gulp.git#4.0",
+    "gulp-expect-file": "0.0.7",
+    "gulp-jshint": "^2.0.4",
+    "jshint-stylish": "^2.2.1"
+	}
+}

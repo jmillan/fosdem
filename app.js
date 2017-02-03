@@ -60,7 +60,7 @@ function sendMessage(text)
 	ua.sendMessage(remotePeer, text, {
 		'eventHandlers': {
 			'failed': function(e){
-				console.log('! message could not be deliveved: %s', e.response.reason_phrase);
+				console.log('! message could not be delivered: %s', e.response.reason_phrase);
 			}
 		}
 	});

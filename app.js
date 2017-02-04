@@ -35,6 +35,7 @@ let remotePeer;
 // Start User Agent.
 (function ()
 {
+	// Create a Node WebSocket instance.
 	let socket = new NodeWebSocket(socket_url ,socket_options);
 
 	config.sockets.push(socket);
@@ -89,19 +90,6 @@ function onMessage(e)
 
 // Helper functions //
 
-// Call. Send invitation to the other peer and open the browser.
-function call() {
-	console.log();
-	console.log('-- calling \'%s\' --', remotePeer);
-	console.log();
-
-	// Send invitation link.
-	sendMessage('invite-'+ invitation);
-
-	// Open browser.
-	open(tryit);
-}
-
 function isConnected()
 {
 	if (!ua.isConnected())
@@ -133,7 +121,6 @@ function cli()
 				clear();
 				console.log();
 				console.log('- chat       : establish a chat session with the remote peer');
-				console.log('- call       : establish a call with the remote peer');
 				console.log('- register   : register SIP UA');
 				console.log('- unregister : unregister SIP UA');
 				console.log('- peer       : set remote peer name');
@@ -181,26 +168,6 @@ function cli()
 				// Register new MESSAGE callback function
 				ua.on('newMessage', onMessage);
 				chat();
-				break;
-			}
-
-			case 'call':
-			{
-				if (remotePeer === undefined)
-				{
-					console.log('remote peername is not set');
-					cli();
-					break;
-				}
-
-				if (!isConnected())
-				{
-					cli();
-					break;
-				}
-
-				call();
-				cli();
 				break;
 			}
 
@@ -302,7 +269,17 @@ function chat()
 					break;
 				}
 
-				call();
+				// Send invitation to the other peer and open the browser.
+				console.log();
+				console.log('-- calling \'%s\' --', remotePeer);
+				console.log();
+
+				// Send invitation link.
+				sendMessage('invite-'+ invitation);
+
+				// Open browser.
+				open(tryit);
+
 				chat();
 				break;
 			}

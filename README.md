@@ -9,9 +9,7 @@ The `config_example.js` file can be used as a template.
 
 The application provides a basic CLI to monitor and control a SIP User Agent instance.
 
-<p align="center"><img src="images/help_menu.png"/></p>
-
-<p align="center"><img src="images/info_menu.png"/></p>
+<p align="left"><img src="images/menu.png"/></p>
 
 ## Installation
 
